@@ -46,6 +46,11 @@ spec:
                 configMapKeyRef:
                   key: SPRING_KAFKA_PRODUCER_PROPERTIES_SCHEMA_REGISTRY_URL
                   name: order-service-config
+          resources:
+            requests:
+              memory: "512Mi"
+            limits:
+              memory: "1.5Gi"
 ---
 apiVersion: v1
 kind: Service

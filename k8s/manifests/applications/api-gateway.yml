@@ -18,6 +18,10 @@ spec:
           ports:
             - containerPort: 9000
           env:
+            - name: BPL_JVM_HEAD_ROOM
+              value: "0"
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Xms16M -Xmx64M -XX:MaxMetaspaceSize=128M -XX:ReservedCodeCacheSize=64M -Xss256K"
             - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER-URI
               valueFrom:
                 configMapKeyRef:
@@ -48,6 +52,11 @@ spec:
                 configMapKeyRef:
                   key: INVENTORY_SERVICE_URL
                   name: common-config
+          resources:
+            requests:
+              memory: "512Mi"
+            limits:
+              memory: "1.5Gi"
 ---
 apiVersion: v1
 kind: Service

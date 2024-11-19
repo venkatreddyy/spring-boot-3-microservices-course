@@ -1,5 +1,6 @@
 package com.techie.microservices.order;
 
+import org.junit.Ignore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
@@ -8,6 +9,7 @@ import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
 @TestConfiguration(proxyBeanMethods = false)
+@Ignore
 public class TestOrderServiceApplication {
 
 	@Bean

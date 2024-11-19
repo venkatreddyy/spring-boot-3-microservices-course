@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: venkat/frontend:latest
+          image: venkat34/frontend:latest
           ports:
             - containerPort: 80
 ---
