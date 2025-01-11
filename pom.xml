@@ -41,6 +41,7 @@
             <publishRegistry>
               <username>venkat34</username>
               <password>${dockerPassword}</password>
+              <!---->
             </publishRegistry>
           </docker>
           <excludes>
